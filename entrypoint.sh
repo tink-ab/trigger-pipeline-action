@@ -65,7 +65,11 @@ echo "Build created:"
 URL=$(jq --raw-output ".web_url" <<< "$RESPONSE")
 echo $URL
 
-# Provide JSON and Web URL as outputs for downstream actions
+API_URL=$(jq --raw-output ".url" <<< "$RESPONSE")
+echo $API_URL
+
+# Provide JSON, Web URL and api URL as outputs for downstream actions
 echo "::set-output name=json::$RESPONSE"
 echo "::set-output name=url::$URL"
+echo "::set-output name=apiUrl::$API_URL"
 

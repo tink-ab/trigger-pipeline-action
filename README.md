@@ -53,6 +53,7 @@ The following outputs are provided by the action:
 |Output var|Description|
 |-|-|
 |url|The URL of the Buildkite build.|
+|apiUrl|The api endpoint of the Buildkite build.|
 |json|The JSON response returned by the Buildkite API.|
 
 ## Development
